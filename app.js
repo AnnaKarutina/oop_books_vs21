@@ -1,5 +1,6 @@
 // project objects
 const ui = new UI()
+const ls = new LS()
 
 // event elements
 const form = document.querySelector('#book-form');
@@ -22,6 +23,8 @@ function addBook(event){
     const book = new Book(title, author, isbn)
     // add book by ui object addBook method
     ui.addBook(book)
+    // add book by ls object addBook method
+    ls.addBook(book)
 
     titleInput.value = '';
     authorInput.value = '';
