@@ -8,6 +8,14 @@ const booksList = document.querySelector('#book-list');
 
 // events
 form.addEventListener('submit', addBook);
+document.addEventListener('DOMContentLoaded', getBooks);
+
+function getBooks(){
+    const books = ls.getData('books')
+    books.forEach(function (book){
+        ui.addBook(book)
+    })
+}
 
 function addBook(event){
 // get form input data
